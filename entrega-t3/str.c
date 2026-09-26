@@ -101,7 +101,6 @@ Str s_cria(char const *strC)
     return s;
 }
 
-// Aloca, inicializa e retorna uma nova string, contendo a representação decimal de num
 Str s_cria_número(double num) 
 {
     char buf[256];
@@ -109,12 +108,20 @@ Str s_cria_número(double num)
     return s_cria(buf);
 }
 
-// Retorna uma nova string, resultado da concatenação das strings em l, com a string
-//   em sep entre cada duas strings de l
-// Exemplo:
-// ["oi" "mundo"] ", " -> "oi, mundo"
-Str s_cria_unindo(Lista l, Str sep) {
-    
+Str s_cria_unindo(Lista l, Str sep)
+{
+    assert(l != NULL);
+    assert(sep != NULL);
+
+    Str nova = s_cria("");
+    for (int i = 0; i < l_tam(l); i++)
+    {
+        if (i > 0)
+            s_anexa(nova, sep);
+        s_anexa(nova, l_dado_pos(l, i));
+    }
+
+    return nova;
 }
 
 void s_destroi(Str s)
@@ -131,7 +138,7 @@ Str s_cria_substring(Str_c s, int pos, int tam)
     return nova;
 }
 
-Str s_cria_copia(Str_c s)
+Str s_cria_cópia(Str_c s)
 {
     return s_cria_substring(s, 0, -1);
 }
@@ -216,6 +223,14 @@ int s_tam(Str_c s)
 {
     s_ok(s);
     return s->n;
+}
+
+double s_número(Str_c s)
+{
+    char *str = s_strc(s);
+    double num = strtod(str, NULL);
+    free(str);
+    return num;
 }
 
 char *s_strc(Str_c s)
