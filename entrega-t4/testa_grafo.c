@@ -67,18 +67,18 @@ Grafo cria_grafo()
   g_insere_nó(g, s);
   strcpy(s, "calça");
   g_insere_nó(g, s);
-  g_insere_nó(g, "cinto");
-  g_insere_nó(g, "casaco");
-  g_insere_nó(g, "cueca");
-  g_insere_nó(g, "camisa");
+  g_insere_nó(g, (char[7]){"cinto"});
+  g_insere_nó(g, (char[7]){"casaco"});
+  g_insere_nó(g, (char[7]){"cueca"});
+  g_insere_nó(g, (char[7]){"camisa"});
   strcpy(s, "meia->sapato");
   g_altera_valor_da_aresta(g, 1, 0, s);
   strcpy(s, "calça->sapato");
   g_altera_valor_da_aresta(g, 2, 0, s);
-  g_altera_valor_da_aresta(g, 5, 2, "cueca->calça");
-  g_altera_valor_da_aresta(g, 2, 3, "calça->cinto");
-  g_altera_valor_da_aresta(g, 6, 4, "camisa->casaco");
-  g_altera_valor_da_aresta(g, 6, 3, "camisa->cinto");
+  g_altera_valor_da_aresta(g, 5, 2, (char[15]){"cueca->calça"});
+  g_altera_valor_da_aresta(g, 2, 3, (char[15]){"calça->cinto"});
+  g_altera_valor_da_aresta(g, 6, 4, (char[15]){"camisa->casaco"});
+  g_altera_valor_da_aresta(g, 6, 3, (char[15]){"camisa->cinto"});
   return g;
 }
 

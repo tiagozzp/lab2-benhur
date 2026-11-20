@@ -139,7 +139,7 @@ void f_inicia_percurso(Fila self, int pos_inicial)
 
     self->percurso_sentido = -1;
     self->percurso_atual = self->fim;
-    for (int i = 0; i < -pos_inicial - 1 && self->percurso_atual != NULL; i++) {
+    for (int i = 0; i < -(pos_inicial + 1) && self->percurso_atual != NULL; i++) {
         self->percurso_atual = self->percurso_atual->ant;
     }
 }
