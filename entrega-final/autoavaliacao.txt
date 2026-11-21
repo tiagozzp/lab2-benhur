@@ -1,0 +1,32 @@
+Autoavaliação — Laboratório de Programação II
+Nota de autoavaliação: 9/10
+
+Desenvolvimento dos trabalhos
+
+Entreguei os quatro trabalhos. No T1, trabalhei com a organização do jogo e o
+registro das pontuações. No T2, implementei o TAD de strings com suporte a
+UTF-8. No T3, pratiquei listas duplamente encadeadas e o uso de um dicionário
+na calculadora. No T4, implementei a fila genérica e o grafo, testei o jogo
+com as redes fornecidas e escrevi a análise sobre o treinamento.
+
+Os testes de strings, fila e grafo ajudaram a verificar o comportamento das
+estruturas. O modo de treinamento do T4 também foi testado com uma execução
+curta. Os trabalhos ajudaram a entender como dividir um programa em módulos
+e como uma escolha de estrutura afeta as operações que o programa mais usa.
+
+Aprendizagem do conteúdo
+
+Os pontos em que mais avancei foram a implementação de TADs em C, a separação
+entre interface e implementação e o uso de alocação dinâmica. Consigo
+explicar a diferença entre armazenamento contíguo e encadeado, entre
+encadeamento simples e duplo, e o comportamento de pilhas, filas e deques.
+
+Em grafos, o T4 ajudou a entender a representação por listas de adjacência,
+o percurso das arestas e a relação entre detecção de ciclos e ordenação
+topológica. Em árvores binárias e árvores binárias de busca, entendo a
+organização e a busca, mas ainda preciso praticar mais a remoção e o
+balanceamento em árvores autoequilibradas.
+
+A nota considera o que consegui aplicar nos trabalhos e os pontos em que
+ainda quero ganhar autonomia, especialmente em árvores e nos testes de
+casos menos comuns.
